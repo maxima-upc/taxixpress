@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  precioservicio: 1.5
+  distrito_origen: 
+  distrito_destino: 
+
+two:
+  precioservicio: 1.5
+  distrito_origen: 
+  distrito_destino: 

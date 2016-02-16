@@ -1,0 +1,27 @@
+<h1>Listing precios</h1>
+
+<table>
+  <tr>   
+    <th>Distrito origen</th>
+    <th>Distrito destino</th>
+     <th>Precio Servicio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @precios.each do |precio| %>
+  <tr>    
+    <td><%= precio.distrito_origen.nombredistrito %></td>
+    <td><%= precio.distrito_destino.nombredistrito %></td>
+    <td><%= precio.precioservicio %></td>
+    <td><%= link_to 'Show', precio %></td>
+    <td><%= link_to 'Edit', edit_precio_path(precio) %></td>
+    <td><%= link_to 'Destroy', precio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Precio', new_precio_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  direccionorigen: MyString
+  direcciondestino: MyString
+  fechaservicio: 2016-02-16
+  horaservicio: 2016-02-16 02:14:41
+  pasajeros: 1
+  cliente: 
+  precio: 
+
+two:
+  direccionorigen: MyString
+  direcciondestino: MyString
+  fechaservicio: 2016-02-16
+  horaservicio: 2016-02-16 02:14:41
+  pasajeros: 1
+  cliente: 
+  precio: 

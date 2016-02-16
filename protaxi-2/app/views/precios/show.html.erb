@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Distrito origen:</b>
+  <%= @precio.distrito_origen.nombredistrito %>
+</p>
+
+<p>
+  <b>Distrito destino:</b>
+  <%= @precio.distrito_destino.nombredistrito %>
+</p>
+
+<p>
+  <b>Precio de servicio:</b>
+  <%= @precio.precioservicio %>
+</p>
+
+<%= link_to 'Edit', edit_precio_path(@precio) %> |
+<%= link_to 'Back', precios_path %>
