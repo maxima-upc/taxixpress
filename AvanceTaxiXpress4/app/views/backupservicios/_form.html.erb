@@ -1,0 +1,45 @@
+<%= form_for(@servicio) do |f| %>
+  <% if @servicio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@servicio.errors.count, "error") %> prohibited this servicio from being saved:</h2>
+
+      <ul>
+      <% @servicio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :direccionorigen %><br>
+    <%= f.text_field :direccionorigen %>
+  </div>
+  <div class="field">
+    <%= f.label :direcciondestino %><br>
+    <%= f.text_field :direcciondestino %>
+  </div>
+  <div class="field">
+    <%= f.label :fechaservicio %><br>
+    <%= f.date_select :fechaservicio %>
+  </div>
+  <div class="field">
+    <%= f.label :horaservicio %><br>
+    <%= f.time_select :horaservicio %>
+  </div>
+  <div class="field">
+    <%= f.label :pasajeros %><br>
+    <%= f.number_field :pasajeros %>
+  </div>
+  <div class="field">
+    <%= f.label :cliente_id %><br>
+    <%= f.text_field :cliente_id %>
+  </div>
+  <div class="field">
+    <%= f.label :precio_id %><br>
+    <%= f.text_field :precio_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<%= form_for(@distrito_destino) do |f| %>
+  <% if @distrito_destino.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@distrito_destino.errors.count, "error") %> prohibited this distrito_destino from being saved:</h2>
+
+      <ul>
+      <% @distrito_destino.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombredistrito %><br>
+    <%= f.text_field :nombredistrito %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<%= form_for(@precio) do |f| %>
+  <% if @precio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@precio.errors.count, "error") %> prohibited this precio from being saved:</h2>
+
+      <ul>
+      <% @precio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :"Distrito Origen" %><br />
+    <%= f.collection_select :distrito_origen_id, DistritoOrigen.all, :id, :nombredistrito, :prompt => true %>        
+  </div>
+
+
+  <div class="field">
+    <%= f.label :"Distrito Destino" %><br />
+    <%= f.collection_select :distrito_destino_id, DistritoDestino.all, :id, :nombredistrito, :prompt => true %>   
+  </div>
+
+  <div class="field">
+    <%= f.label :"Precio Servicio" %><br />
+    <%= f.text_field :precioservicio %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

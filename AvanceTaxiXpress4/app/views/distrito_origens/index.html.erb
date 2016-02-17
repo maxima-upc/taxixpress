@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Distrito Origens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombredistrito</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @distrito_origens.each do |distrito_origen| %>
+      <tr>
+        <td><%= distrito_origen.nombredistrito %></td>
+        <td><%= link_to 'Show', distrito_origen %></td>
+        <td><%= link_to 'Edit', edit_distrito_origen_path(distrito_origen) %></td>
+        <td><%= link_to 'Destroy', distrito_origen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Distrito origen', new_distrito_origen_path %>

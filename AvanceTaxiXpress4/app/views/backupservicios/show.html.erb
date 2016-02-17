@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Direccionorigen:</strong>
+  <%= @servicio.direccionorigen %>
+</p>
+
+<p>
+  <strong>Direcciondestino:</strong>
+  <%= @servicio.direcciondestino %>
+</p>
+
+<p>
+  <strong>Fechaservicio:</strong>
+  <%= @servicio.fechaservicio %>
+</p>
+
+<p>
+  <strong>Horaservicio:</strong>
+  <%= @servicio.horaservicio %>
+</p>
+
+<p>
+  <strong>Pasajeros:</strong>
+  <%= @servicio.pasajeros %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @servicio.cliente %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @servicio.precio %>
+</p>
+
+<%= link_to 'Edit', edit_servicio_path(@servicio) %> |
+<%= link_to 'Back', servicios_path %>
