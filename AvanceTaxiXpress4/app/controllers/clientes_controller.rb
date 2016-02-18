@@ -71,4 +71,5 @@ class ClientesController < ApplicationController
     def cliente_params
       params.require(:cliente).permit(:dni, :usuario, :password, :nombre, :apellido, :movil, :nacimiento, :email)
     end
+    
 end

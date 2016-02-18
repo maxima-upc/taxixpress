@@ -21,7 +21,7 @@
     <td><%= servicio.fechaservicio %></td>
     <td><%= servicio.horaservicio %></td>
     <td><%= servicio.pasajeros %></td>
-    
+    <td><%= servicio.cliente.fullname %></td>
     <td><%= servicio.precio.tarifa %></td>
     <td><%= link_to 'Show', servicio %></td>
     <td><%= link_to 'Edit', edit_servicio_path(servicio) %></td>

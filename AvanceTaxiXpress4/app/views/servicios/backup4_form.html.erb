@@ -11,18 +11,10 @@
     </div>
   <% end %>
 
-  <% a = current_user.id%>
-  <% usuario = Profile.find(a).full_name %>
-  <%= usuario %>
-
-  
-<div class="field">
+  <div class="field">
     <%= f.label :Cliente %><br />
      <%= f.collection_select :cliente_id, Profile.all, :id, :full_name, :prompt => true %>        
-  </div>  
-
-  
-  
+  </div>
   <div class="field">
     <%= f.label :"Tabla de precio por distritos" %><br />
      <%= f.collection_select :precio_id, Precio.all, :id, :tarifa, :prompt => true %>        

@@ -6,7 +6,7 @@
     <%= f.input :apellido %>
     <%= f.input :dni %>
     <%= f.input :movil %>
-    <%= f.input :nacimiento %>
+    <%= f.input :nacimiento, start_year: 1920, end_year: 2000 %>
     <%= f.association :user %>
   </div>
 
